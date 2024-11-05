@@ -1,12 +1,11 @@
 const Header = ({ course }) => <h1>{course}</h1>;
 
 const Total = ({ parts }) => {
-  let sum = 0;
-  for (const part of parts) {
-    sum += part.exercises;
-  }
-
-  return <p>Number of exercises {sum}</p>;
+  return (
+    <p>
+      Number of exercises {parts.reduce((acc, part) => acc + part.exercises, 0)}
+    </p>
+  );
 };
 
 const Part = ({ part }) => (

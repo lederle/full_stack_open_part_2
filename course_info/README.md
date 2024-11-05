@@ -12,7 +12,7 @@
 
 ### Exercise 2.1
 
-#### Course Information, Step 1 [&#8593;](#course-info-app)
+#### Course Information, Step 6 [&#8593;](#course-info-app)
 
 Let's finish the code for rendering course contents from exercises 1.1 - 1.5. You can start with the code from the model answers. The model answers for part 1 can be found by going to the submission system, clicking on my submissions at the top, and in the row corresponding to part 1 under the solutions column clicking on show. To see the solution to the course info exercise, click on index.js under kurssitiedot ("kurssitiedot" means "course info").
 
@@ -66,8 +66,14 @@ Ensure that the console shows no errors!
 
 ### Exercise 2.2
 
-#### Course Information, Step 2 [&#8593;](#course-info-app)
+#### Course Information, Step 7 [&#8593;](#course-info-app)
 
 Show also the sum of the exercises of the course:
 
 ![](./src/assets/9e.png)
+
+### Exercise 2.3
+
+#### Course Information, Step 8 [&#8593;](#course-info-app)
+
+If you haven't done so already, calculate the sum of exercises with the array method reduce.
