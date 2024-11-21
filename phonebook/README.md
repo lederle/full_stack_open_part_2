@@ -64,3 +64,13 @@ NB:
 
 - you can use the person's name as a value of the key property
 - remember to prevent the default action of submitting HTML forms!
+
+### Exercise 2.7
+
+#### Phonebook, Step 2 [&#8593;](#phonebook-app)
+
+Prevent the user from being able to add names that already exist in the phonebook. JavaScript arrays have numerous suitable methods for accomplishing this task. Keep in mind how object equality works in Javascript.
+
+Issue a warning with the alert command when such an action is attempted:
+
+![](./src/assets/11e.png)
