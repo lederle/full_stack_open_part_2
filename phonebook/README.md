@@ -74,3 +74,21 @@ Prevent the user from being able to add names that already exist in the phoneboo
 Issue a warning with the alert command when such an action is attempted:
 
 ![](./src/assets/11e.png)
+
+### Exercise 2.8
+
+#### Phonebook, Step 3 [&#8593;](#phonebook-app)
+
+Expand your application by allowing users to add phone numbers to the phone book. You will need to add a second input element to the form (along with its own event handler):
+
+```react
+<form>
+  <div>name: <input /></div>
+  <div>number: <input /></div>
+  <div><button type="submit">add</button></div>
+</form>
+```
+
+At this point, the application could look something like this. The image also displays the application's state with the help of React developer tools:
+
+![](./src/assets/12e.png)
