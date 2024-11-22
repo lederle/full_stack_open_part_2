@@ -102,3 +102,37 @@ Implement a search field that can be used to filter the list of people by name:
 ![](./src/assets/13e.png)
 
 You can implement the search field as an input element that is placed outside the HTML form. The filtering logic shown in the image is case insensitive, meaning that the search term _arto_ also returns results that contain Arto with an uppercase A.
+
+### Exercise 2.10
+
+#### Phonebook, Step 5 [&#8593;](#phonebook-app)
+
+If you have implemented your application in a single component, refactor it by extracting suitable parts into new components. Maintain the application's state and all event handlers in the App root component.
+
+It is sufficient to extract three components from the application. Good candidates for separate components are, for example, the search filter, the form for adding new people to the phonebook, a component that renders all people from the phonebook, and a component that renders a single person's details.
+
+The application's root component could look similar to this after the refactoring. The refactored root component below only renders titles and lets the extracted components take care of the rest.
+
+```react
+const App = () => {
+  // ...
+
+  return (
+    <div>
+      <h2>Phonebook</h2>
+
+      <Filter ... />
+
+      <h3>Add a new</h3>
+
+      <PersonForm
+        ...
+      />
+
+      <h3>Numbers</h3>
+
+      <Persons ... />
+    </div>
+  )
+}
+```
