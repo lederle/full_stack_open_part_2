@@ -92,3 +92,13 @@ Expand your application by allowing users to add phone numbers to the phone book
 At this point, the application could look something like this. The image also displays the application's state with the help of React developer tools:
 
 ![](./src/assets/12e.png)
+
+### Exercise 2.9
+
+#### Phonebook, Step 4 [&#8593;](#phonebook-app)
+
+Implement a search field that can be used to filter the list of people by name:
+
+![](./src/assets/13e.png)
+
+You can implement the search field as an input element that is placed outside the HTML form. The filtering logic shown in the image is case insensitive, meaning that the search term _arto_ also returns results that contain Arto with an uppercase A.
