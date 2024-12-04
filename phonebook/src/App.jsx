@@ -35,7 +35,18 @@ const App = () => {
         setNewNumber("");
       });
     } else {
-      alert("${newPerson.name} is already added to the phonebook");
+      const person = persons.find((p) => p.name === newPerson.name);
+      const change = { ...person, number: newPerson.number };
+      confirm(
+        `${person.name} is already added to the phonebook, replace the old number ${person.number} with the new number ${newPerson.number}?`,
+      );
+      personService.update(person.id, change).then((returnedPerson) => {
+        setPersons(
+          persons.map((p) => (p.id === person.id ? returnedPerson : p)),
+        );
+        setNewName("");
+        setNewNumber("");
+      });
     }
   };
 
