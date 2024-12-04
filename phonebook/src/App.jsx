@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import PhonebookEntry from "./components/PhonebookEntry";
 import Filter from "./components/Filter";
 import PersonForm from "./components/PersonForm";
 import personService from "./services/persons";
+import PhonebookEntries from "./components/PhonebookEntries";
 
 const App = () => {
   const [persons, setPersons] = useState([]);
@@ -57,11 +57,27 @@ const App = () => {
     ? persons.filter((p) => filterRe.test(p.name))
     : persons;
 
+  const removePerson = (id) => {
+    const deleteIndex = persons.findIndex((p) => p.id === id);
+    if (confirm(`Do you really want to delete ${persons[deleteIndex].name}?`)) {
+      personService
+        .remove(id)
+        .then(() => {
+          setPersons(persons.toSpliced(deleteIndex, 1));
+        })
+        .catch((_) => {
+          alert(
+            `the person ${persons[deleteIndex].name} is not found on the server`,
+          );
+          setPersons(persons.filter((p) => p.id !== id));
+        });
+    }
+  };
+
   return (
     <div>
       <h2>Phonebook</h2>
       <Filter searchText={newSearch} handler={handleSearchChange} />
-
       <h3>Add a new</h3>
       <PersonForm
         formHandler={addPerson}
@@ -70,9 +86,11 @@ const App = () => {
         phone={newNumber}
         phoneHandler={handleNumberChange}
       />
-
       <h3>Numbers</h3>
-      <PhonebookEntry persons={entriesToShow} />
+      <PhonebookEntries
+        personList={entriesToShow}
+        removeHandler={removePerson}
+      />
     </div>
   );
 };
