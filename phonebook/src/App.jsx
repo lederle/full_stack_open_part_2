@@ -22,7 +22,6 @@ const App = () => {
     const newPerson = {
       name: newName,
       number: newNumber,
-      id: String(persons.length + 1),
     };
 
     if (
@@ -30,9 +29,13 @@ const App = () => {
         (p) => p.name.toLowerCase() === newPerson.name.toLowerCase(),
       )
     ) {
-      setPersons(persons.concat(newPerson));
-      setNewName("");
-      setNewNumber("");
+      axios
+        .post("http://localhost:3001/persons", newPerson)
+        .then((response) => {
+          setPersons(persons.concat(response.data));
+          setNewName("");
+          setNewNumber("");
+        });
     } else {
       alert("${newPerson.name} is already added to the phonebook");
     }

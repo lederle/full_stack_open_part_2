@@ -2,14 +2,18 @@
 
 ## Phonebook App
 
-| Contents                 |
-| ------------------------ |
-| [Step 1](#exercise-2.6)  |
-| [Step 2](#exercise-2.7)  |
-| [Step 3](#exercise-2.8)  |
-| [Step 4](#exercise-2.9)  |
-| [Step 5](#exercise-2.10) |
-| [Step 6](#exercise-2.11) |
+| Contents                  |
+| ------------------------- |
+| [Step 1](#exercise-2.6)   |
+| [Step 2](#exercise-2.7)   |
+| [Step 3](#exercise-2.8)   |
+| [Step 4](#exercise-2.9)   |
+| [Step 5](#exercise-2.10)  |
+| [Step 6](#exercise-2.11)  |
+| [Step 7](#exercise-2.12)  |
+| [Step 8](#exercise-2.13)  |
+| [Step 9](#exercise-2.14)  |
+| [Step 10](#exercise-2.15) |
 
 ### Exercise 2.6
 
@@ -188,3 +192,11 @@ Error: listen EADDRINUSE 0.0.0.0:3001
 it means that port 3001 is already in use by another application, e.g. in use by an already running json-server. Close the other application, or change the port in case that doesn't work.
 
 Modify the application such that the initial state of the data is fetched from the server using the axios-library. Complete the fetching with an Effect hook.
+
+### Exercise 2.12
+
+#### Phonebook, Step 7 [&#8593;](#phonebook-app)
+
+Let's return to our phonebook application.
+
+Currently, the numbers that are added to the phonebook are not saved to a backend server. Fix this situation.
