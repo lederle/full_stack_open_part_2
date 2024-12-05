@@ -1,12 +1,9 @@
-const PhonebookEntry = ({ persons }) => {
+const PhonebookEntry = ({ person, remove }) => {
   return (
-    <ul>
-      {persons.map((p) => (
-        <li key={p.id}>
-          {p.name} {p.number}
-        </li>
-      ))}
-    </ul>
+    <li>
+      {person.name} {person.number}
+      <button onClick={() => remove(person.id)}>delete</button>
+    </li>
   );
 };
 
