@@ -10,13 +10,12 @@ const App = () => {
   const [newNumber, setNewNumber] = useState("");
   const [newSearch, setNewSearch] = useState("");
   const [showFiltered, setShowFiltered] = useState(false);
-
+  
   useEffect(() => {
     personService.getAll().then((initialPersons) => {
       setPersons(initialPersons);
     });
   }, []);
-
   const addPerson = (event) => {
     event.preventDefault();
     const newPerson = {

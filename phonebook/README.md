@@ -15,6 +15,7 @@
 | [Step 9](#exercise-2.14)  |
 | [Step 10](#exercise-2.15) |
 
+
 ### Exercise 2.6
 
 #### Phonebook, Step 1 [&#8593;](#phonebook-app)
@@ -236,3 +237,4 @@ Change the functionality so that if a number is added to an already existing use
 If the person's information is already in the phonebook, the application can ask the user to confirm the action:
 
 ![](./src/assets/16e.png)
+
